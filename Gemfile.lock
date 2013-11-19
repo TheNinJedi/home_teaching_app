@@ -68,6 +68,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    ffaker (1.21.0)
     ffi (1.9.3)
     figaro (0.7.0)
       bundler (~> 1.0)
@@ -201,6 +202,7 @@ DEPENDENCIES
   cancan
   coffee-rails (~> 3.2.1)
   devise
+  ffaker
   figaro
   guard
   guard-livereload
