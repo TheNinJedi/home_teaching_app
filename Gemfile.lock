@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/blowmage/minitest-rails.git
+  revision: f0783fb76cec69941de65e71d14b14a6a59e8be6
+  specs:
+    minitest-rails (0.9.2.20131029140815)
+      minitest (~> 4.7)
+      minitest-test (~> 1.0)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
   branch: 3
@@ -43,6 +52,8 @@ GEM
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
     callsite (0.0.11)
     cancan (1.6.10)
@@ -56,6 +67,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    debug_inspector (0.0.2)
     devise (3.2.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -68,6 +80,12 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    factory_girl (4.3.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
+      railties (>= 3.0.0)
+    ffaker (1.21.0)
     ffi (1.9.3)
     figaro (0.7.0)
       bundler (~> 1.0)
@@ -114,7 +132,11 @@ GEM
       railties
     method_source (0.8.2)
     mime-types (1.25)
-    minitest (5.0.8)
+    minitest (4.7.5)
+    minitest-colorize (0.0.5)
+      minitest (>= 2.0)
+    minitest-test (1.0.0)
+      minitest (~> 4.0)
     multi_json (1.8.2)
     orm_adapter (0.5.0)
     pg (0.17.0)
@@ -197,10 +219,13 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  binding_of_caller
   bootstrap-sass!
   cancan
   coffee-rails (~> 3.2.1)
   devise
+  factory_girl_rails (>= 4.2.0)
+  ffaker
   figaro
   guard
   guard-livereload
@@ -209,6 +234,8 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   meta_request
+  minitest-colorize
+  minitest-rails!
   pg
   powder
   pry-rails
