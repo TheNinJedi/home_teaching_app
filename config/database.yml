@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: home_teaching_app_development
+  database: home_teaching_app_developement
   pool: 5
   username: chris
   password: 
