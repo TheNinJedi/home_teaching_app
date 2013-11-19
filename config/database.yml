@@ -6,9 +6,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: home_teaching_app_developement
+  database: home_teaching_app_development
   pool: 5
-  username: kevin
+  username: chris
   password: 
 
 # Warning: The database defined as "test" will be erased and
@@ -19,7 +19,7 @@ test:
   encoding: unicode
   database: home_teaching_app_test
   pool: 5
-  username: kevin
+  username: chris
   password: 
 
 production:
@@ -27,5 +27,5 @@ production:
   encoding: unicode
   database: home_teaching_app_production
   pool: 5
-  username: kevin
+  username: chris
   password: 
