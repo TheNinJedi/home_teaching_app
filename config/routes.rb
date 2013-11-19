@@ -1,5 +1,11 @@
 HomeTeachingApp::Application.routes.draw do
+<<<<<<< HEAD
   get "home", to: "home#index", as: :home
+=======
+  
+
+  devise_for :users
+>>>>>>> 8257c211e516dcaaf4dad8a834b1d67bbf3fd6ec
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
