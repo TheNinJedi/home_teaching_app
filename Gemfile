@@ -16,6 +16,7 @@ group :developement do
 	gem 'meta_request'
   gem 'powder'
   gem 'xray-rails'
+  gem 'ffaker'
   gem 'letter_opener'
   gem 'guard'
   gem 'rb-fsevent', require: false

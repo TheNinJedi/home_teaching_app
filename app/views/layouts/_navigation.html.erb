@@ -8,4 +8,14 @@
     </button>
     <%= link_to "Home", root_path, class: "navbar-brand" %>
   </div>
+
+  <ul class="nav navbar-nav navbar-right">
+  	  <% if user_signed_in? %>
+  	  <li class="navbar-text"> Signed in as <%= current_user.first_name.titleize %></li>
+  	  <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+  	  <% else %>
+  	  <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+    </ul>
 </nav>
