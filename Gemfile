@@ -8,6 +8,8 @@ gem 'rails', '3.2.15'
 gem 'pg'
 gem 'simple_form'
 gem 'devise'
+gem 'cancan'
+gem 'rolify'
 gem 'figaro'
 
 group :developement do
