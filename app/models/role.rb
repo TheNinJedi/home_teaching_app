@@ -3,4 +3,6 @@ class Role < ActiveRecord::Base
   belongs_to :resource, :polymorphic => true
   
   scopify
+
+  # do we define our various roles here?
 end
