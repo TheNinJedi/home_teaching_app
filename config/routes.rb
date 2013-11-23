@@ -1,7 +1,10 @@
 HomeTeachingApp::Application.routes.draw do
+  get "path", to: 'controller#action', as: :name_of_path
+
+  resources :families
 
   get "home", to: "home#index", as: :home
-  get "family", to: "family#index", as: :family
+  
 
   devise_for :users
 
