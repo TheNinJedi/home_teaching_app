@@ -1,10 +1,10 @@
 HomeTeachingApp::Application.routes.draw do
 
   get "home", to: "home#index", as: :home
-  
+  get "family", to: "family#index", as: :family
 
   devise_for :users
-  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -6,9 +6,11 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "Home", root_path, class: "navbar-brand" %>
-  </div>
-
+     <%= link_to "Home", root_path, class: "navbar-brand" %>
+  	  </div>
+	<ul class="nav navbar-nav">
+  	<li><%= link_to "Families", family_path %></li>
+	</ul>
   <ul class="nav navbar-nav navbar-right">
   	  <% if user_signed_in? %>
   	  <li class="navbar-text"> Signed in as <%= current_user.first_name.titleize %></li>
