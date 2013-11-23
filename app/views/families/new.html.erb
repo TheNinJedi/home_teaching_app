@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NewFamily</title>
+</head>
+
+
+<body>
+
+  <div>
+    <%= simple_form_for @family, url: new_family_path do |f| %>
+    <div class="form-inputs">
+      <%= f.input :fam_name %>
+      <%= f.input :h_o_h %>
+      <%= f.input :address %>
+    </div>
+  </div>
+  
+</body>
+</html>
