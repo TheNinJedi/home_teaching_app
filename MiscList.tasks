@@ -2,3 +2,9 @@ IDEAS:
   ☐ Use rolify's before_add method to maybe make it so that when you add a new user via the site it asks for an admin's credentials and then allows the admin to set the role of the new user? maybe thats how we get through the setting roles and permissions thing.
   ☐ FAMILIES.  Maybe we can create a form that we (everyone or just admins?) can use to submit a new family to the db. Obviously it has to write to the db.
     ☐ How are we going to go about changing the assignment of home teachers to the family when routes change?
+  ☐ Use forem gem to create a sort of message board on the site so that announcements and links can be posted to make the HT's jobs even easier.
+    links to the months topics, links to other resources. 
+    see if forem has a PM cabability.
+    Encouragement from leadership. any public info that needs to be dispersed.
+    announcements.
+      like for cleaning schedule or stuff like that.
