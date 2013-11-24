@@ -17,6 +17,18 @@ class Ability
     else
       can :read, :all
     end
+
+    if user.has_role? :supervisor 
+      can :manage, :all
+    else
+      can :read, :all
+    end
+
+    if user.has_role? :home_teacher 
+      can :manage, :all
+    else
+      can :read, :all
+    end
     
     #
     # The first argument to `can` is the action you are giving the user 
