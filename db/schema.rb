@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131121231827) do
+ActiveRecord::Schema.define(:version => 20131203233339) do
 
   create_table "families", :force => true do |t|
     t.string   "fam_name"
@@ -19,6 +19,39 @@ ActiveRecord::Schema.define(:version => 20131121231827) do
     t.string   "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "members", :force => true do |t|
+    t.string   "full_name"
+    t.string   "preferred_name"
+    t.string   "hh_position"
+    t.string   "hh_order"
+    t.string   "household_phone"
+    t.string   "individual_phone"
+    t.string   "household_email"
+    t.string   "individual_email"
+    t.string   "street_1"
+    t.string   "street_2"
+    t.string   "dp"
+    t.string   "city"
+    t.string   "postal"
+    t.string   "state_prov"
+    t.string   "country"
+    t.string   "two_street_1"
+    t.string   "two_street_2"
+    t.string   "two_dp"
+    t.string   "two_city"
+    t.string   "two_zip"
+    t.string   "two_state_prov"
+    t.string   "two_country"
+    t.string   "ward_geo_code"
+    t.string   "sex"
+    t.string   "priesthood"
+    t.string   "married"
+    t.integer  "family_id"
+    t.integer  "vt_route_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "roles", :force => true do |t|
