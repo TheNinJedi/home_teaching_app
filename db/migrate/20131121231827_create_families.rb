@@ -4,7 +4,7 @@ class CreateFamilies < ActiveRecord::Migration
       t.string :fam_name
       t.string :h_o_h
       t.string :address
-
+      t.belongs_to :route
       t.timestamps
     end
   end

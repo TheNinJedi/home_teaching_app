@@ -3,8 +3,6 @@ HomeTeachingApp::Application.routes.draw do
 
   resources :families
 
-  resources :families
-
   get "home", to: "home#index", as: :home
   
 
