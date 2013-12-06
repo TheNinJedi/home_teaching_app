@@ -1,4 +1,7 @@
 class Member < ActiveRecord::Base
+  belongs_to :member
+  belongs_to :vt_route
+  
   # attr_accessible :title, :body
 
   class << self
