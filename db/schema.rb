@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131204045132) do
+ActiveRecord::Schema.define(:version => 20131205225938) do
 
   create_table "districts", :force => true do |t|
     t.integer  "organization_id"
@@ -26,14 +26,6 @@ ActiveRecord::Schema.define(:version => 20131204045132) do
     t.integer  "route_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "members", :force => true do |t|
-    t.string   "name"
-    t.integer  "multiassignable_id"
-    t.string   "multiassignable_type"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
   end
 
   create_table "organizations", :force => true do |t|
@@ -85,5 +77,17 @@ ActiveRecord::Schema.define(:version => 20131204045132) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
+
+  create_table "vt_models", :force => true do |t|
+    t.integer  "district_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "vt_routes", :force => true do |t|
+    t.integer  "district_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end
