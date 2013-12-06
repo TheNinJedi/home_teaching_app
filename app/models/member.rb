@@ -1,5 +1,6 @@
 class Member < ActiveRecord::Base
   # attr_accessible :title, :body
+<<<<<<< HEAD
 
   class << self
   	def pull(path)
@@ -36,4 +37,7 @@ class Member < ActiveRecord::Base
   		end
   	end
   end
+=======
+  belongs_to :multiassignable, polymorphic: true
+>>>>>>> 78456b48d5db92bd81adaf31e888e80c8ceab899
 end
