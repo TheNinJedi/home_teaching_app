@@ -1,7 +1,7 @@
 class Member < ActiveRecord::Base
   belongs_to :family
   belongs_to :vt_route
-  
+
   # attr_accessible :title, :body
 
   class << self
