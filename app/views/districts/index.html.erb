@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Districts</title>
+</head>
+<body>
+  
+  <div class="row text-center">
+    <h1>Districts in this Organization</h1>
+  </div>
+  <div>
+    <h4 class="col-xs-12 text-left">District-ID</h4>
+  </div>
+  <div>
+    <% @districts.each do |district| %>
+    <ul class="col-xs-12 text-left">
+      <li>
+        <%# route.id %>
+        <%= link_to "#{district.id}", routes_path(district.id) %>
+      </li>
+    </ul>
+    <% end %>
+  </div>
+
+</body>
+</html>
