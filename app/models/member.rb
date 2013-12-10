@@ -2,12 +2,11 @@ class Member < ActiveRecord::Base
   belongs_to :family
   belongs_to :vt_route
 
-  # attr_accessible :title, :body
-
+  # attr_accessible :family_id
   class << self
   	def pull(path)
       current_family_id = 0
-  		pool = CSV.table(path)
+  		pool = CSV.table(path, :quote_char => '"')
   		pool.each do |row|
   			member = Member.new
   			member.full_name = row[:full_name]
@@ -37,13 +36,11 @@ class Member < ActiveRecord::Base
   			member.priesthood = row[:priesthood]
   			member.married = row[:married]
         if row[:hh_order] == 1 # 
-          member.family_id = current_family_id += 1 
-          families = Family.new(:family_id => member.family_id, :address => member.address)
+          member.family_id = current_family_id = Family.create.id
         else
           member.family_id = current_family_id
         end
   			member.save
-        families.save
   		end
   	end
   end

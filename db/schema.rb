@@ -111,12 +111,6 @@ ActiveRecord::Schema.define(:version => 20131205225938) do
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
 
-  create_table "vt_models", :force => true do |t|
-    t.integer  "district_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "vt_routes", :force => true do |t|
     t.integer  "district_id"
     t.datetime "created_at",  :null => false
