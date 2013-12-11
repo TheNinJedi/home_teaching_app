@@ -9,27 +9,35 @@
 <body>
 
   <div class="row text-center">
-    <h1>This is the Families page</h1><!-- 
-    <h4 class="col-xs-4 text-left">Family Name</h4> -->
-    <h4 class="col-xs-12 text-left">Head of House</h4>
+    <h1>Families in this Route</h1>
+  </div>
+  <div>
+    <h4 class="col-xs-3">Head of House</h4>
+    <h4 class="col-xs-2 col-offset-3"><%= (Time.now - 3.month).strftime("%b") %></h4>
+    <h4 class="col-xs-2 col-offset-5"><%= (Time.now - 2.month).strftime("%b") %></h4>
+    <h4 class="col-xs-2 col-offset-7"><%= (Time.now - 1.month).strftime("%b") %></h4>
+    <h4 class="col-xs-2 col-offset-9"><%= Time.now.strftime("%b") %></h4>
+  </div>
+  <div>
     <% @families.each do |family| %>
-<!--     <ul class="col-xs-4 text-left">
-    	<%# family.members.first.pluck() %>
-    </ul>
- --><ul class="col-xs-12 text-left">
-      <li>
-    	<%= family.members.first.full_name.split(',').first %>
-    </li>
-    </ul>
-  </br>
-</br>
+      <li class="col-xs-3">
+        <%= link_to "#{family.members.first.preferred_name}", family_path(family.id) %>
+    	  <%# family.members.first.preferred_name %>
+      </li>
+      <li class="col-xs-2 col-offset-3">
+        <input type="checkbox">
+      </li>
+      <li class="col-xs-2 col-offset-5">
+        <input type="checkbox">
+      </li>
+      <li class="col-xs-2 col-offset-7">
+        <input type="checkbox">
+      </li>
+      <li class="col-xs-2 col-offset-9">
+        <input type="checkbox">
+      </li>
 
     <% end %>
-  </div>
-
-  <div class="text-right">
-    <%= link_to 'Add a Family', new_family_path %>
-    <%# eventually we should make it possible to add multiple families at the same time. %>
   </div>
 
 </body>

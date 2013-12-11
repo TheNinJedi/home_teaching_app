@@ -18,22 +18,22 @@ class Ability
       can :read, :all
     end
 
-    # if user.has_role? :aux_leadership
-    #   can :manage, :all
+    # if user.has_role? :eq_leadership
+    #   can :manage, :eq_org
     # else
-    #   can :read, :all
+    #   can :read, :eq_org
     # end
 
     # if user.has_role? :supervisor 
-    #   can :manage, Route_id
+    #   can :manage, :district_id
     # else
-    #   can :read, :all
+    #   can :read, :district_id
     # end
 
     # if user.has_role? :home_teacher 
-    #   can :manage, :all
+    #   can :manage, :route_id
     # else
-    #   can :read, :all
+    #   can :read, :route_id
     # end
 
     #

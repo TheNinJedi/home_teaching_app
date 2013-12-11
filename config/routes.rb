@@ -1,7 +1,7 @@
 HomeTeachingApp::Application.routes.draw do
   get "path", to: 'controller#action', as: :name_of_path
 
-  resources :families
+  resources :families, :routes, :districts
 
   get "home", to: "home#index", as: :home
   

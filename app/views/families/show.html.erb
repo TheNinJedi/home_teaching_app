@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Families_Show</title>
+</head>
+<body>
+  
+  <div>
+    <h4 class="row text-center">Family Members</h4>
+  </div>
+  <div>
+    <h4 class="col-xs-4">Preferred Name</h4>
+    <h4 class="col-xs-4 col-offset-4">HH Position</h4>
+    <h4 class="col-xs-4 col-offset-8">Gender</h4>
+  </div>
+  <div>
+    <% @family.members.each do |member| %>
+      <ul class="col-xs-4">
+        <li>
+          <%= member.preferred_name %>
+        </li>
+      </ul>
+      <ul class="col-xs-4 col-offset-4">
+        <li>
+          <%= member.hh_position %>
+        </li>
+      </ul>
+      <ul class="col-xs-4 col-offset-8">
+        <li>
+          <%= member.sex %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+
+</body>
+</html>
