@@ -20,22 +20,22 @@
   </div>
   <div>
     <% @families.each do |family| %>
-      <li class="col-xs-3">
+      <ul class="col-xs-3">
         <%= link_to "#{family.members.first.preferred_name}", family_path(family.id) %>
     	  <%# family.members.first.preferred_name %>
-      </li>
-      <li class="col-xs-2 col-offset-3">
+      </ul>
+      <ul class="col-xs-2 col-offset-3">
         <input type="checkbox">
-      </li>
-      <li class="col-xs-2 col-offset-5">
+      </ul>
+      <ul class="col-xs-2 col-offset-5">
         <input type="checkbox">
-      </li>
-      <li class="col-xs-2 col-offset-7">
+      </ul>
+      <ul class="col-xs-2 col-offset-7">
         <input type="checkbox">
-      </li>
-      <li class="col-xs-2 col-offset-9">
+      </ul>
+      <ul class="col-xs-2 col-offset-9">
         <input type="checkbox">
-      </li>
+      </ul>
 
     <% end %>
   </div>
