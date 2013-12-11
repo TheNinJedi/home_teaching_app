@@ -11,12 +11,12 @@
   <div class="row text-center">
     <h1>This is the Families page</h1><!-- 
     <h4 class="col-xs-4 text-left">Family Name</h4> -->
-    <h4 class="col-xs-12">Head of House</h4>
+    <h4 class="col-xs-12 text-left">Head of House</h4>
     <% @families.each do |family| %>
 <!--     <ul class="col-xs-4 text-left">
     	<%# family.members.first.pluck() %>
     </ul>
- --><ul class="col-xs-12">
+ --><ul class="col-xs-12 text-left">
       <li>
     	<%= family.members.first.full_name.split(',').first %>
     </li>
