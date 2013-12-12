@@ -16,19 +16,13 @@
   <div>
     <% @route.families.each do |family| %>
       <ul class="col-xs-4">
-        <li>
-          <%= family.member.hh_order(1).preferred_name %>
-        </li>
+          <%= family.members.hh_order(1).preferred_name %>
       </ul>
       <ul class="col-xs-4 col-offset-4">
-        <li>
           <%= family.member.hh_order(1).street_1 %>
-        </li>
       </ul>
       <ul class="col-xs-4 col-offset-8">
-        <li>
           <%= family.id %>
-        </li>
       </ul>
     <% end %>
   </div>
